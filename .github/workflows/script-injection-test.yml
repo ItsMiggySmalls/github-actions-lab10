@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
-      - name: Check issue title
-        env:
+      - env:
           TITLE: ${{ github.event.issue.title }}
         run: |
           issue_title="$TITLE"
